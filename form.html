@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registration - HamzaJEC</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="icon" type="image/png" href="assets/favicon.ico" >
+  <style>
+    body {
+    font-family: 'Montserrat', sans-serif;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-image: url('PlantechArchitects\ Construction\ Company\ in\ Calicut.jpg');
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+
+    .modal {
+      display: flex;                    /* pehle se open rahega page load pe */
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.85);
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+    }
+
+    .modal-content {
+      background: #1e293b;
+      color: white;
+      width: 90%;
+      max-width: 480px;
+      border-radius: 16px;
+      padding: 40px 32px;
+      position: relative;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6);
+      border: 1px solid #334155;
+    }
+
+    .close {
+      position: absolute;
+      top: 16px;
+      right: 24px;
+      font-size: 36px;
+      cursor: pointer;
+      color: #94a3b8;
+    }
+
+    .close:hover { color: #f87171; }
+
+    h2 {
+      text-align: center;
+      color: #ffcc00;
+      margin-bottom: 32px;
+      font-size: 2.1rem;
+    }
+
+    .choice-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .choice-btn {
+      padding: 18px 24px;
+      font-size: 1.35rem;
+      font-weight: bold;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: all 0.2s;
+      border: none;
+    }
+
+    .employer-btn {
+      background: #ffcc00;
+      color: #000;
+    }
+
+    .worker-btn {
+      background: #000;
+      color: #ffcc00;
+      border: 2px solid #ffcc00;
+    }
+
+    .choice-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    /* Employer & Worker Form Styles (same jo pehle the) */
+    .form-modal .modal-content {
+      max-width: 520px;
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: 500;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 14px;
+      background: #0f172a;
+      border: 1px solid #475569;
+      border-radius: 8px;
+      color: white;
+      font-size: 1rem;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      outline: none;
+      border-color: #ffcc00;
+      box-shadow: 0 0 0 3px rgba(255,204,0,0.2);
+    }
+
+    button[type="submit"] {
+      width: 100%;
+      padding: 16px;
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 12px;
+    }
+
+    button[type="submit"]:hover {
+      background: #ffd633;
+    }
+
+    #bg-video {
+  position: fixed;          /* screen pe fixed rahega */
+  right: 0;
+  bottom: 0;
+  min-width: 100%;          /* poori width cover kare */
+  min-height: 100%;         /* poori height cover kare */
+  width: auto;
+  height: auto;
+  z-index: -1;              /* sab content ke peeche rahega */
+  object-fit: cover;        /* video crop ho kar fit ho jaye, stretch na ho */
+}
+
+/* Dark overlay daal sakte ho taake text readable rahe (optional but recommended) */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.65);   /* 65% black overlay – adjust kar sakte ho 0.5 ya 0.7 */
+  z-index: -1;
+}
+
+/* ===== form.html FIXED RESPONSIVE BREAKPOINTS ===== */
+
+/* MOBILE FIRST (320px–480px) */
+@media (max-width: 480px) {
+  form { width: 100%; padding: 10px; display: flex; flex-direction: column; gap: 15px; }
+  form input, form textarea, form button { width: 100%; margin-bottom: 10px; }
+}
+
+/* TABLETS (481px–768px) */
+@media (max-width: 768px) {
+  form { width: 90%; margin: auto; }
+}
+
+/* SMALL LAPTOPS (769px–1024px) */
+@media (max-width: 1024px) {
+  form { width: 70%; margin: auto; }
+}
+
+/* LARGE SCREENS (1440px+) */
+@media (min-width: 1440px) {
+  form { width: 60%; margin: auto; }
+}
+    
+  </style>
+</head>
+<body>
+
+    <!-- Video background yahan daalna hai -->
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="Blue Gradient Linktree Background.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
+
+
+
+  <!-- ==================== CHOICE MODAL (pehle se open rahega) ==================== -->
+  <div id="choiceModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="window.location.href='index.html'">×</span>
+      
+      <h2>You are registering as...</h2>
+      
+      <div class="choice-buttons">
+        <button class="choice-btn employer-btn" onclick="showEmployerForm()">
+          👔 I'm an Employer
+        </button>
+        
+        <button class="choice-btn worker-btn" onclick="showWorkerForm()">
+          👷 I'm a Worker
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== EMPLOYER FORM (hidden by default) ==================== -->
+  <div id="employerForm" class="modal form-modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" onclick="backToChoice()">×</span>
+      <h2>Employer Registration</h2>
+      
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="9e3534c5-fd66-41ac-92b6-f4adb7b52ed4">
+        <input type="hidden" name="subject" value="New Employer Registration - HamzaJEC">
+
+        <div class="form-group">
+          <label>Contact Person Name *</label>
+          <input type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>Company Name *</label>
+          <input type="text" name="company" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address *</label>
+          <input type="email" name="email" required>
+        </div>
+
+        <div class="form-group">
+          <label>Phone / WhatsApp *</label>
+          <input type="tel" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label>City *</label>
+          <input type="text" name="city" required>
+        </div>
+
+        <div class="form-group">
+          <label>Required Workers Type *</label>
+          <select name="workers_needed" required>
+            <option value="">Select type</option>
+            <option>Electricians</option>
+            <option>Plumbers</option>
+            <option>Carpenters</option>
+            <option>AC Technicians</option>
+            <option>Drivers</option>
+            <option>Others</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Number of Workers Needed *</label>
+          <input type="number" name="quantity" min="1" required>
+        </div>
+
+        <div class="form-group">
+          <label>Additional Requirements</label>
+          <textarea name="message" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Submit Request</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ==================== WORKER FORM (hidden by default) ==================== -->
+  <div id="workerForm" class="modal form-modal" style="display:none;">
+    <div class="modal-content">
+      <span class="close" onclick="backToChoice()">×</span>
+      <h2>Worker Registration</h2>
+      
+      <form action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="9e3534c5-fd66-41ac-92b6-f4adb7b52ed4">
+        <input type="hidden" name="subject" value="New Worker Registration - HamzaJEC">
+
+        <div class="form-group">
+          <label>Full Name *</label>
+          <input type="text" name="name" required>
+        </div>
+
+        <div class="form-group">
+          <label>CNIC Number *</label>
+          <input type="text" name="cnic" required>
+        </div>
+
+        <div class="form-group">
+          <label>Phone / WhatsApp *</label>
+          <input type="tel" name="phone" required>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" name="email">
+        </div>
+
+        <div class="form-group">
+          <label>City *</label>
+          <input type="text" name="city" required>
+        </div>
+
+        <div class="form-group">
+          <label>Main Skill *</label>
+          <select name="skill" required>
+            <option value="">Select skill</option>
+            <option>Electrician</option>
+            <option>Plumber</option>
+            <option>Carpenter</option>
+            <option>Painter</option>
+            <option>AC Technician</option>
+            <option>Driver</option>
+            <option>Others</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Experience (Years)</label>
+          <input type="number" name="experience" min="0">
+        </div>
+
+        <div class="form-group">
+          <label>About Yourself</label>
+          <textarea name="message" rows="4"></textarea>
+        </div>
+
+        <button type="submit">Register Now</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    function showEmployerForm() {
+      document.getElementById('choiceModal').style.display = 'none';
+      document.getElementById('employerForm').style.display = 'flex';
+    }
+
+    function showWorkerForm() {
+      document.getElementById('choiceModal').style.display = 'none';
+      document.getElementById('workerForm').style.display = 'flex';
+    }
+
+    function backToChoice() {
+      document.getElementById('employerForm').style.display = 'none';
+      document.getElementById('workerForm').style.display = 'none';
+      document.getElementById('choiceModal').style.display = 'flex';
+    }
+
+    // Optional: Back button se index pe wapas jana
+    document.querySelectorAll('.close').forEach(el => {
+      el.addEventListener('click', () => {
+        if (el.closest('#choiceModal')) {
+          window.location.href = 'index.html';
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,2298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HAMZAJEC.</title>
+  <meta name="description" content="One stop solution for all types of labours - manpower - workers - suppliers - contractors & for all types of industries."/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/favicon.ico" >
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      color: #fff;
+      background: #ffffff;
+      
+    }
+
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+  z-index: 1000;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+}
+
+/* Logo */
+.logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: 800;
+  color: #111;
+  gap: 10px;
+}
+
+.logo-square {
+  width: 35px;
+  height: 35px;
+  background: #ffcc00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  border-radius: 6px;
+}
+
+/* Links */
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* Underline Hover Effect */
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 2px;
+  background: #ffcc00;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* ===== Navbar Base ===== */
+
+#navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  transition: all 0.4s ease;
+  z-index: 1000;
+}
+
+/* Default (Top pe white) */
+#navbar.default {
+  background: #ffffff;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+}
+
+/* Scroll pe Glass Blur Effect */
+#navbar.scrolled {
+  background: rgba(0, 0, 0, 0.3);   /* transparent dark */
+  backdrop-filter: blur(11px);
+  -webkit-backdrop-filter: blur(11px);
+  box-shadow: none;
+}
+
+/* Links default */
+#navbar.default .nav-links a {
+  color: #333;
+}
+
+/* Links scroll pe white */
+#navbar.scrolled .nav-links a {
+  color: #fff;
+}
+
+/* Logo scroll pe white */
+#navbar.scrolled .logo {
+  color: #fff;
+}
+
+/* Smooth transition */
+.nav-links a,
+.logo {
+  transition: 0.3s;
+}
+
+
+    /* Hero Section - matches your screenshot */
+    .hero {
+      height: 100vh;
+      min-height: 700px;
+      background-image: url('Construction\ worker\ .jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 0, 0, 0.55); /* Dark overlay like in your photo */
+      z-index: 1;
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 1100px;
+      padding: 0 30px;
+    }
+    .hero h1.main-title {
+      font-size: 5.5rem;
+      font-weight: 900;
+      color: #ffcc00;
+      margin-bottom: 10px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+    }
+    .hero .tagline {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin: 20px 0 30px;
+      color: #fff;
+    }
+    .hero .subtitle {
+      font-size: 2.8rem;
+      font-weight: bold;
+      margin: 40px 0 20px;
+      color: #ffcc00;
+    }
+    .hero .description {
+      font-size: 1.5rem;
+      max-width: 900px;
+      margin: 0 auto 40px;
+      line-height: 1.5;
+    }
+    .hero .small-text {
+      font-size: 1.3rem;
+      opacity: 0.9;
+    }
+
+
+    
+    /* Yellow Banner */
+    .banner {
+      background: #ffcc00; /* Bright yellow */
+      color: #000;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 1.8rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      border-bottom: 4px solid #000;
+    }
+    .banner span {
+      margin: 0 15px;
+    }
+
+    /* Main Content Section */
+    .workforce-section {
+      background: #000;
+      padding: 60px 20px;
+      text-align: center;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      gap: 40px;
+    }
+    .column {
+      flex: 1;
+      min-width: 320px;
+      padding: 20px;
+    }
+    .icon-circle {
+      width: 180px;
+      height: 180px;
+      margin: 0 auto 30px;
+      border-radius: 50%;
+      overflow: hidden;
+      border: 8px solid #ffcc00; /* Yellow border like in screenshot */
+      box-shadow: 0 0 20px rgba(255, 204, 0, 0.4);
+    }
+    .icon-circle img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    h2 {
+      color: #ffcc00;
+      font-size: 2.2rem;
+      margin: 20px 0 15px;
+      text-transform: uppercase;
+    }
+    p {
+      font-size: 1.3rem;
+      margin-bottom: 15px;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      font-size: 1.2rem;
+    }
+    ul li {
+      margin: 10px 0;
+    }
+    .question {
+      font-weight: bold;
+      color: #ffcc00;
+      margin: 25px 0 15px;
+      font-size: 1.4rem;
+    }
+    .highlight {
+      color: #ffcc00;
+      font-weight: bold;
+    }
+
+
+    .services-section {
+      max-width: 1400px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .header {
+     width: 80vh;
+  margin-left: calc(-50vw + 50%);
+  background-color: white;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+  font-style: normal;
+   font-size: 45px;
+  font-weight: 500;
+  
+    font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 800;
+  
+
+}
+
+
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+      background-color: #ffffff;
+      padding: 20px;
+    }
+
+    .card {
+      position: relative;
+      overflow: hidden;
+      border-radius: 8px;
+      background-color: #333;
+    }
+
+    .card img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.35s ease;
+    }
+
+    .card:hover img {
+      transform: scale(1.08);
+    }
+
+    .card-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+      color: white;
+      text-align: center;
+      padding: 16px 12px 12px;
+      font-size: 17px;
+      font-weight: 600;
+      text-shadow: 0 1px 3px rgba(0,0,0,0.9);
+    }
+
+    .banner {
+      position: relative;
+      max-width: 1000px;
+      margin: 30px auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(6, 137, 224, 0.25);
+      background: #192730;
+      color: white;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+    }
+
+    .image-side {
+      flex: 0 0 45%;
+      height: 100%;
+    }
+
+    .image-side img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .text-side {
+      flex: 1;
+      padding: 50px 60px;
+      text-align: left;
+    }
+
+    .top-bar {
+      background: #000;
+      color: #ffcc00;
+      text-align: center;
+      padding: 12px 0;
+      font-size: 18px;
+      font-weight: bold;
+      letter-spacing: 1px;
+      border-bottom: 1px solid #333;
+    }
+
+    .main-title {
+      font-size: 32px;
+     
+      line-height: 1.3;
+      margin-bottom: 20px;
+
+      font-family: "Playball", cursive;
+  font-weight: 400;
+  font-style: normal;
+    }
+
+    .highlight {
+      color: #ffcc00;
+    }
+
+    .free-text {
+      font-size: 20px;
+      color: #ffcc00;
+      font-weight: bold;
+      margin: 25px 0 35px;
+    }
+
+    .enquiry-btn {
+      display: inline-block;
+      background: #ffcc00;
+      color: #000;
+      font-size: 22px;
+      font-weight: bold;
+      padding: 16px 50px;
+      border-radius: 50px;
+      text-decoration: none;
+      text-transform: uppercase;
+      box-shadow: 0 6px 15px rgba(255,204,0,0.4);
+      transition: all 0.3s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .enquiry-btn:hover {
+      background: #ffd633;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(255,204,0,0.5);
+    }
+
+    .cursor-hand {
+      position: absolute;
+      bottom: 25px;
+      right: 80px;
+      font-size: 60px;
+      color: white;
+      opacity: 0.9;
+      animation: point 1.8s infinite alternate;
+    }
+
+    @keyframes point {
+      from { transform: translateX(0); }
+      to   { transform: translateX(15px); }
+    }
+.headline-section {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 24px;
+      letter-spacing: 1.2px;
+    }
+
+    .carousel-frame {
+      max-width: 1100px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+    }
+
+    .panel-track {
+      display: flex;
+      transition: transform 0.6s ease-in-out;
+    }
+
+    .feature-panel {
+      min-width: 100%;
+      height: 420px;
+      display: flex;
+      flex-direction: row;
+      background: linear-gradient(135deg, #00b09b 0%, #006064 100%);
+      color: white;
+      position: relative;
+    }
+
+    .bg-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, #00b09b, #1e88e5, #006064);
+      opacity: 0.9;
+    }
+
+    .inner-layout {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      width: 100%;
+      padding: 50px;
+      align-items: center;
+    }
+
+    .statistic-block {
+      flex: 0 0 40%;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .year-label {
+      font-size: 80px;
+      line-height: 1;
+    }
+
+    .quarter-label {
+      font-size: 100px;
+      margin: -20px 0;
+    }
+
+    .brand-caption {
+      font-size: 28px;
+      margin: 10px 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .insight-block {
+      flex: 1;
+      padding-left: 60px;
+    }
+
+    .insight-heading {
+      font-size: 32px;
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+
+    .insight-text {
+      font-size: 18px;
+      line-height: 1.6;
+      margin-bottom: 30px;
+      opacity: 0.95;
+    }
+
+    .action-pill {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      color: white;
+      font-size: 18px;
+      font-weight: bold;
+      padding: 14px 40px;
+      border-radius: 50px;
+      text-decoration: none;
+      border: 2px solid white;
+      transition: all 0.3s ease;
+    }
+
+    .action-pill:hover {
+      background: white;
+      color: #006064;
+    }
+
+    /* Navigation controls */
+    .nav-control {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 40px;
+      color: white;
+      cursor: pointer;
+      user-select: none;
+      z-index: 10;
+      background: rgba(0,0,0,0.3);
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .control-prev { left: 20px; }
+    .control-next { right: 20px; }
+
+    /* Indicator dots */
+    .indicator-bar {
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    .dot-marker {
+      display: inline-block;
+      width: 12px;
+      height: 12px;
+      margin: 0 8px;
+      background: #bbb;
+      border-radius: 50%;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+
+    .dot-marker.active {
+      background: #006064;
+      width: 16px;
+      height: 16px;
+    }
+
+
+
+    footer {
+      
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  background: radial-gradient(125% 125% at 50% 10%, #fff 40%, #1c2931 100%);
+  z-index: -10;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 40px 60px;
+      
+    }
+
+    .footer-column h3 {
+      color: rgb(0, 0, 0);
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .footer-column p {
+      margin-bottom: 20px;
+      opacity: 0.8;
+      color: black;
+    }
+
+    .social-icons a {
+      color: #000000;
+      font-size: 24px;
+      margin-right: 20px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      /* Subtle base glow */
+      text-shadow: 0 0 4px rgba(255,255,255,0.1);
+    }
+
+    .social-icons a:hover {
+      color: #5bb2da;
+      /* Glow effect on hover - adjust color/intensity as needed */
+      text-shadow: 
+        0 0 8px rgba(255,255,255,0.6),
+        0 0 16px rgba(255,255,255,0.4),
+        0 0 24px rgba(0,102,255,0.5); /* blue tint for tech/marketing vibe */
+      transform: scale(1.15);
+    }
+
+    .newsletter {
+      position: relative;
+    }
+
+    .newsletter input {
+      width: 100%;
+      padding: 14px 16px 14px 45px;
+      margin-bottom: 12px;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 6px;
+      color: rgb(255, 255, 255);
+      font-size: 15px;
+    }
+
+    .newsletter input::placeholder {
+      color: rgb(255, 255, 255);
+    }
+
+    .newsletter .fa-envelope {
+      position: absolute;
+      left: 16px;
+      top: 18px;
+      color: rgb(255, 255, 255);
+      font-size: 18px;
+    }
+
+    .newsletter button {
+      width: 100%;
+      padding: 14px;
+      background: #0066ff;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      transition: all 0.3s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .newsletter button:hover {
+      background: #0055dd;
+      box-shadow: 0 0 12px rgba(0,102,255,0.5);
+    }
+
+    .footer-links {
+      margin-top: 60px;
+      padding-top: 40px;
+      
+      text-align: center;
+      font-size: 14px;
+      color: black;
+    }
+
+    .footer-links a {
+      color: black;
+      margin: 0 12px;
+      text-decoration: none;
+    }
+
+    .footer-links a:hover {
+      color: rgb(255, 0, 0);
+    }
+
+    .copyright {
+      margin-top: 20px;
+      opacity: 0.7;
+    }
+    
+
+  
+    .consultation {
+      
+  width: 100%;
+  height: 100%;
+  background: rgb(255, 255, 255);
+  
+    }
+
+   
+    .consult-form input,
+    .consult-form select {
+      width: 100%;
+      padding: 14px;
+      margin: 12px 0;
+    
+    }
+
+    .consult-form button {
+      background: #ffcc00;
+      color: #000;
+      border: none;
+      padding: 16px 40px;
+      font-weight: bold;
+      border-radius: 30px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    
+    .container1 {
+      max-width: 1300px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    html {
+  scroll-behavior: smooth;
+}
+
+.card {
+  position: relative;
+  border-radius: 15px;
+  overflow: hidden;
+  padding: 5px; 
+  background: linear-gradient(45deg, #00bfff, #f706f7, #53df9e,rgb(216, 85, 150));
+  background-size: 300% 300%;
+  animation: borderMove 4s linear infinite;
+}
+
+
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+
+.card-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+
+@keyframes borderMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.new-hero {
+  background:#192730 ;
+  padding: 120px 5% 80px;
+  color: white;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.hero-left {
+  flex: 1;
+  min-width: 300px;
+}
+
+.hero-left h1 {
+  font-size: 56px;
+  font-weight: 800;
+  line-height: 1.2;
+    font-family: "Roboto Condensed", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+
+}
+
+.hero-left span {
+  color: #ffcc00;
+}
+
+.hero-left p {
+  margin: 25px 0;
+  font-size: 18px;
+  max-width: 500px;
+  opacity: 0.85;
+    
+}
+
+.hero-buttons {
+  margin-top: 30px;
+}
+
+.btn-yellow {
+  background: #ffcc00;
+  color: #000;
+  padding: 14px 35px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 15px;
+  display: inline-block;
+}
+
+.btn-outline {
+  border: 2px solid #ffcc00;
+  color: #ffcc00;
+  padding: 12px 35px;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-outline:hover {
+  background: #ffcc00;
+  color: #000;
+}
+
+.hero-right {
+  flex: 1;
+  text-align: right;
+}
+
+.hero-right img {
+  max-width: 500px;
+  width: 100%;
+}
+
+.banner {
+  position: relative;           
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+  background: #192730;
+  transition: all 0.2s ease;
+}
+
+.banner-card {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  transition: transform 0.25s ease-out;
+  transform-style: preserve-3d;
+  background: #009dff;
+}
+
+
+/* Extra polish */
+.banner-card {
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  
+  transform-style: preserve-3d;
+
+}
+
+.banner:hover {
+  box-shadow: 0 30px 80px rgba(255,204,0,0.25);
+}
+.button2 {
+  display: inline-block;
+  transition: all 0.2s ease-in;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  color: #090909;
+  padding: 0.7em 1.7em;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  border: 1px solid #e8e8e8;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+}
+
+.button2:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+.button2:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.25);
+  top: 100%;
+  width: 140%;
+  height: 180%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:after {
+  content: "";
+  position: absolute;
+  left: 55%;
+  transform: translateX(-50%) scaleY(1) scaleX(1.45);
+  top: 180%;
+  width: 160%;
+  height: 190%;
+  background-color: #009087;
+  border-radius: 50%;
+  display: block;
+  transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);
+  z-index: -1;
+}
+
+.button2:hover {
+  color: #ffffff;
+  border: 1px solid #009087;
+}
+
+.button2:hover:before {
+  top: -35%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+.button2:hover:after {
+  top: -45%;
+  background-color: #009087;
+  transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
+}
+
+
+/* Modal Styles */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.65);
+  overflow: auto;
+}
+
+.modal-content {
+  background: white;
+  margin: 8% auto;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 800px;
+  position: relative;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+  color: #333;
+}
+
+.close {
+  position: absolute;
+  right: 25px;
+  top: 15px;
+  color: #aaa;
+  font-size: 35px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+}
+
+.cert-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin: 40px 0;
+}
+
+.cert-item {
+  flex: 1;
+  min-width: 300px;
+  text-align: center;
+}
+
+.cert-item img {
+  width: 100%;
+  max-width: 380px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  border: 1px solid #ddd;
+}
+
+.cert-title {
+  margin-top: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #004d40;
+}
+.features-container {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
+      justify-content: center;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .feature-card {
+      flex: 1;
+      min-width: 220px;
+      padding: 40px 20px;
+      text-align: center;
+      background: #e2e8f0;
+      color: #1e293b;
+      transition: all 0.35s ease;
+      position: relative;
+    }
+
+    /* Center wala card dark by default */
+    .feature-card.center {
+      background: #0f172a;
+      color: white;
+      z-index: 2;
+    }
+
+    .icon {
+      font-size: 42px;
+      margin-bottom: 16px;
+      opacity: 0.9;
+    }
+
+    h3 {
+      font-size: 1.35rem;
+      margin-bottom: 12px;
+      font-weight: 600;
+    }
+
+    p {
+      font-size: 0.95rem;
+      opacity: 0.85;
+      line-height: 1.5;
+    }
+
+    /* Hover effect */
+    .feature-card:hover {
+      background: #10b981 !important;   /* green color */
+      color: white !important;
+      transform: translateY(-8px);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+
+    .feature-card:hover .icon {
+      transform: scale(1.15);
+    }
+
+    .about-section {
+      padding: 80px 5%;
+      background: #fff;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1.1fr 1fr; /* left - center card - right */
+      gap: 40px;
+      align-items: stretch;
+    }
+
+    /* Left - Image with play button */
+    .left-image {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+      min-height: 480px;
+      background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80') center/cover no-repeat;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.55); /* dark overlay */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .play-btn {
+      width: 80px;
+      height: 80px;
+      background: #10b981; /* green */
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.2rem;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 8px 25px rgba(16, 185, 129, 0.4);
+    }
+
+    .play-btn:hover {
+      transform: scale(1.12);
+      background: #059669;
+    }
+
+    /* Center - About Us Card */
+    .about-card {
+      background: #334155;
+      color: white;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-card h2 {
+      font-size: 2.4rem;
+      margin-bottom: 1.2rem;
+      color: #e2e8f0;
+    }
+
+    .about-card p {
+      font-size: 1.05rem;
+      line-height: 1.7;
+      opacity: 0.9;
+      margin-bottom: 2rem;
+    }
+
+    .learn-more {
+      display: inline-block;
+      background: #10b981;
+      color: white;
+      padding: 14px 32px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      align-self: flex-start;
+    }
+
+    .learn-more:hover {
+      background: #059669;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(16, 185, 129, 0.3);
+    }
+
+    /* Right - Why Choose Us */
+    .why-choose {
+      padding: 20px;
+    }
+
+    .why-choose h3 {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #1e293b;
+    }
+
+    .feature {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 2rem;
+    }
+
+    .feature-icon {
+      width: 60px;
+      height: 60px;
+      background: #10b981;
+      color: white;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-right: 20px;
+      flex-shrink: 0;
+    }
+
+    .feature-content h4 {
+      font-size: 1.3rem;
+      margin-bottom: 8px;
+      color: #1e293b;
+    }
+
+    .feature-content p {
+      font-size: 0.98rem;
+      color: #64748b;
+      line-height: 1.6;
+    }
+
+    .feature2{
+      margin-top: 40px;
+    }
+
+ .hero-split {
+     
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      background-color: white;
+    }
+
+    /* Left side - Full image */
+    .left-image-side {
+      background: url('assets/Human\ resources\ and\ manpower\ planning\ _\ Premium\ Photo.jpg') center/cover no-repeat;
+      position: relative;
+    }
+
+    .left-image-side::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(224,242,241,0.4), transparent 60%);
+      /* subtle fade to blend with right text side */
+    }
+
+    /* Right side - Text content */
+    .right-content-side {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-left: 100px ;
+      max-width: 620px;
+    }
+
+    .brand-label {
+      font-size: 1.1rem;
+      color: #64748b;
+      margin-bottom: 1.2rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .hero-heading {
+      font-size: 4.2rem;
+      font-weight: 700;
+      line-height: 1.05;
+      margin-bottom: 1.6rem;
+      color: #0f172a;
+    }
+
+    .hero-text {
+      font-size: 1.28rem;
+      color: #475569;
+      margin-bottom: 3rem;
+      max-width: 500px;
+      line-height: 1.7;
+    }
+
+    .shop-button {
+      display: inline-block;
+      background: #1e293b;
+      color: white;
+      padding: 16px 52px;
+      border-radius: 60px;
+      font-size: 1.25rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.35s ease;
+      box-shadow: 0 10px 30px rgba(30,41,59,0.15);
+    }
+
+    .shop-button:hover {
+      background: #334155;
+      transform: translateY(-5px);
+      box-shadow: 0 20px 50px rgba(30,41,59,0.25);
+    }
+
+    .secondary-links {
+      margin-top: 2.5rem;
+      display: flex;
+      gap: 2.5rem;
+      font-size: 1.05rem;
+      color: #64748b;
+    }
+
+    .secondary-links a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .secondary-links a:hover {
+      color: #0f172a;
+      text-decoration: underline;
+    }
+    
+.bannerr{
+  margin-top: 30px;
+  margin-right: 20px;
+  padding-left: 20px;
+}
+.company-section {
+      background: linear-gradient(135deg, #f0f4f8,);
+      padding: 60px 5%;
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      
+    
+    }
+
+    .container2 {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+      align-items: center;
+      
+    }
+
+    .text-content {
+      flex: 1;
+      min-width: 320px;
+     
+    }
+
+    .text-content h1 {
+      font-size: 2.5rem;
+      color: #000000;
+      margin-bottom: 1.2rem;
+      line-height: 1.2;
+    }
+
+    .text-content h2 {
+      font-size: 1.8rem;
+      color: #2c5282;
+      margin-bottom: 1.5rem;
+      text-transform: capitalize;
+     
+    }
+
+    .text-content p {
+      font-size: 1.1rem;
+      color: #4a5568;
+      line-height: 1.7;
+      margin-bottom: 1.5rem;
+    }
+
+    .video-content {
+      flex: 1;
+      min-width: 320px;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-content video {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    /* ===== HAMBURGER BASE ===== */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background: white;
+  transition: 0.3s ease;
+}
+
+/* Animation */
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== MOBILE BREAKPOINT ===== */
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    background: #1a1a1a;
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+    gap: 15px;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+    
+/* ===== index.html FIXED RESPONSIVE BREAKPOINTS ===== */
+
+/* MOBILE FIRST (320px–480px) */
+@media (max-width: 480px) {
+  .hero { text-align: center; padding: 120px 5% 60px; }
+  .hero h1 { font-size: 28px; }
+  .cards { flex-direction: column; gap: 15px; }
+  .card { width: 100%; margin-bottom: 20px; }
+  .nav-links { display: none; flex-direction: column; width: 100%; top: 60px; right: 0; padding: 20px; background: #1a1a1a; gap: 15px; }
+  .hamburger { display: flex; }
+}
+
+/* TABLETS (481px–768px) */
+@media (max-width: 768px) {
+  .hero h1 { font-size: 32px; }
+  .cards { flex-wrap: wrap; }
+  .card { width: 48%; }
+}
+
+/* SMALL LAPTOPS (769px–1024px) */
+@media (max-width: 1024px) {
+  .hero h1 { font-size: 38px; }
+  .card { width: 45%; }
+}
+
+/* LARGE SCREENS (1440px+) */
+@media (min-width: 1440px) {
+  .hero h1 { font-size: 52px; }
+  .nav-container, .hero, .cards { padding-left: 10%; padding-right: 10%; }
+}
+  </style>
+</head>
+<body>
+
+ 
+  <nav id="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <div class="logo-square">HC</div>
+      HAMZAJEC.
+      </div>
+      <div class="nav-links">
+        <a href="#company">Company</a>
+        <a href="#services">Services</a>
+        <a href="#Enquiry">Enquiry</a>
+        <a href="#About Us">About Us</a>
+        <a href="contact.html">Contact Us</a>
+               <button id="certificatesBtn" class="button2">Verify Us</button>
+
+
+
+      </div>
+       <!-- Hamburger -->
+  <div class="hamburger" onclick="toggleMenu(this)">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+    </div>
+  </nav>
+   
+<section class="new-hero" id="company">
+  <div class="hero-container">
+    
+    <div class="hero-left">
+      <h1>
+       HAMZA JAN  <br>
+        <span>ENTERPRIZE COMPANY</span>
+      </h1>
+       <H2 style="color: #000000;">We Build Something <br>
+<span style="color: #000000;">New And Consistent.</span></H2>
+      <p>
+        Looking for skilled workers? OR
+        Want to work with us?
+        Fill out the forms by clicking the button below.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="form.html" class="btn-yellow">Fill the forms</a>
+        <a href="#services" class="btn-outline">Our Service</a>
+      </div>
+    </div>
+
+    <div class="hero-right">
+      <img src="assets/Capture8.PNG" alt="Construction Worker">
+    </div>
+
+  </div>
+</section>
+
+<section class="bannerr">
+<div class="hero-split" >
+  <div class="left-image-side"></div>
+
+
+  <div class="right-content-side">
+    <div class="brand-label " style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">Company Profile & Overview</div>
+    <h1 class="hero-heading" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">Hamza Jan Enterprize Company </h1>
+    <p class="hero-text" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">
+     Hamza Jan Enterprize is a professional construction company specializing in building, infrastructure development, and civil engineering projects. We plan, design, and execute residential, commercial, and industrial construction with quality and reliability, contributing to modern infrastructure through houses, offices, roads, and other essential facilities.
+    </p>
+    
+  </div>
+</div>
+</section>
+ 
+<section class="company-section" id="Vision">
+    <div class="container2">
+
+   
+      <div class="text-content">
+        <h1 style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;"> Our Vision</h1>
+        <h2 style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">
+         To become a trusted and leading enterprise in construction and workforce solutions by providing quality services, innovation, and customer satisfaction.
+        </h2>
+        <p style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">
+          Workforce Supply Services
+        </p>
+      </div>
+
+      <!-- Right - Video -->
+      <div class="video-content">
+        <!-- Yahan apni video ka link daal den -->
+        <video autoplay loop muted>
+          <source src="assets/PinDown.io_@mypromovideos_1772105418.mp4" type="video/mp4">
+        </video>
+      </div>
+
+    </div>
+  </section>
+
+  
+<script>
+  const navbar = document.getElementById("navbar");
+
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > 50) {
+      navbar.classList.remove("default");
+      navbar.classList.add("scrolled");
+    } else {
+      navbar.classList.remove("scrolled");
+      navbar.classList.add("default");
+    }
+  });
+
+  navbar.classList.add("default");
+</script>
+
+  <div class="services-section" id="services">
+    <div class="header">
+     "Home Skilled Workers"
+    </div>
+
+    <div class="grid-container">
+
+      <!-- Row 1 -->
+      <div class="card">
+        <img src="assets/electricity.jpg" alt="Construction Workers">
+        <div class="card-label">Electricians</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/plumber.jpg" alt="Construction Site">
+        <div class="card-label">		Plumbers</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/carpenter.jpg" alt="Factory Workers">
+        <div class="card-label">	Carpenters</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/painter.jpg" alt="Industrial">
+        <div class="card-label">	Painters</div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="card">
+        <img src="assets/AC & Refrigeration Technicians.jpg" alt="Warehouse">
+        <div class="card-label">	AC & Refrigeration Technicians</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/Refrigerator repair in leesburg va.jpg" alt="Logistics">
+        <div class="card-label">	Appliance Repair Technicians</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/tile.jpg" alt="Security Guard">
+        <div class="card-label">Tile Fixers</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/tutor.jpg" alt="Cleaning Staff">
+        <div class="card-label">Home Tutors for all subjects</div>
+      </div>
+
+    </div>
+  </div>
+
+    <div class="services-section">
+    <div class="header" >
+    "Industrial Workers"
+    </div>
+
+    <div class="grid-container">
+
+      <!-- Row 1 -->
+      <div class="card">
+        <img src="assets/Cleaning & Sanitation Workers.jpg" alt="Construction Workers">
+        <div class="card-label">Cleaning & Sanitation Workers </div>
+      </div>
+
+      <div class="card">
+        <img src="assets/DRIVER.jpg" alt="Construction Site">
+        <div class="card-label">	Drivers</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/mechanial.jpg" alt="Factory Workers">
+        <div class="card-label">	Mechanical Technicians</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/machine.jpg" alt="Industrial">
+        <div class="card-label">	Machine Operators</div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="card">
+        <img src="assets/Excavator 3.jpg" alt="Warehouse">
+        <div class="card-label">	Heavy Equipment Operators</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/Why Should Oakland Businesses Hire a Local Security Guard Company in Oakland_.jpg" alt="Logistics">
+        <div class="card-label">	Safety Officers</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/Shuttering Carpenter Work.jpg" alt="Security Guard">
+        <div class="card-label">	Shuttering Carpenters</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/Ensure Uninterrupted Power.jpg" alt="Cleaning Staff">
+        <div class="card-label">	Industrial Maintenance Technicians</div>
+      </div>
+
+    </div>
+  </div>
+
+
+    <div class="services-section">
+    <div class="header">
+    "Our Core Services"
+    </div>
+
+    <div class="grid-container">
+
+      <!-- Row 1 -->
+      <div class="card">
+        <img src="assets/Building Construction.jpg" alt="Construction Workers">
+        <div class="card-label">Construction Services</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/Labour & Manpower Supply.jpg" alt="Construction Site">
+        <div class="card-label">Labour & Manpower Supply</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/Contractor & Supplier Services.jpg" alt="Factory Workers">
+        <div class="card-label">Contractor & Supplier Services</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/Industrial Support Services.jpg" alt="Industrial">
+        <div class="card-label">Industrial Support Services</div>
+      </div>
+
+      <!-- Row 2 -->
+      <div class="card">
+        <img src="assets/General Support Labour.jpg" alt="Warehouse">
+        <div class="card-label">General Support Labour</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/Factory worker colleague stock photo_ Image of industry - 31945502.jpg" alt="Logistics">
+        <div class="card-label">Industrial Semi-Skilled Workers</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/Office Semi-Skilled Workers.jpg" alt="Security Guard">
+        <div class="card-label">Office Semi-Skilled Workers</div>
+      </div>
+
+      <div class="card">
+        <img src="assets/Home Semi-Skilled Workers.jpg" alt="Cleaning Staff">
+        <div class="card-label">Home Semi-Skilled Workers</div>
+      </div>
+
+    </div>
+  </div>
+
+
+    <div class="banner" id="Enquiry">
+
+    <div class="image-side">
+      
+      <img src="assets/Helper Labour Supply Services in Dubai _ Helper Manpower Supply in UAE.jpg" alt="Construction workers team">
+      
+    </div>
+
+    <div class="text-side">
+      <h2 class="main-title">
+        Looking for <br>Manpower Labours Suppliers Labour Contractors <br> ?
+      </h2>
+
+      <div class="free-text" style="font-family: Playball, cursive;
+  font-weight: 400;
+  font-style: normal;"
+      >
+        fill the form below here
+      </div>
+     <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1s1E6enc2OmKB8Zlo0RXQL3hcNU9kF8ZTODR8f-BUjGACpQ/viewform?usp=publish-editor">
+      <button class="enquiry-btn">OPEN NOW</button>
+
+      
+     </a>
+      </div>
+
+    </div>
+
+  </div>
+</div>
+
+  <div class="headline-section" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">THOUGHT LEADERSHIP</div>
+
+<div class="carousel-frame">
+    <div class="panel-track" id="panelTrack">
+
+      <!-- Panel 1: FBR Certificate  -->
+      <div class="feature-panel" style="background: linear-gradient(135deg, #004d40 0%, #00695c 100%);">
+        <div class="bg-overlay"></div>
+        <div class="inner-layout" style="padding:40px; gap:40px; flex-wrap:wrap;">
+          <div class="statistic-block" style="flex: 0 0 42%; text-align:center;">
+            <div class="year-label" style="font-size: 40px; color:#ffffff;"style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">SECP & FBR REGISTERED COMPANY</div>
+
+            
+            <!-- Certificate Image  -->
+            <div style="background:#5986d8; padding:8px; border-radius:12px; box-shadow:0 15px 35px rgba(0,0,0,0.5); max-width:320px; margin:20px auto 0;">
+              <img src="assets/fBR NOTICE.PNG" alt="Hamza Jan Enterprize FBR NTN Certificate" 
+                   style="width:100%; height:auto; border-radius:6px; display:block;">
+            </div>
+          </div>
+
+          <div class="insight-block" style="flex:1; min-width:300px; margin-bottom: 180px;">
+            <h2 class="insight-heading" style="color:#ffcc00; font-size:36px;" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">
+              HAMZA JAN ENTERPRIZE – FBR APPROVED & TAX COMPLIANT
+            </h2>
+            <p class="insight-text" style="font-size:18px; line-height:1.7;" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">
+              Humari company Federal Board of Revenue (FBR) se fully registered hai with valid National Tax Number (NTN). 
+              Har project pe transparent billing, withholding tax deduction aur proper documentation milta hai. 
+               contractor services mein EOBI, provincial labour laws aur FBR rules 100% follow karte hain – 
+             
+            </p>
+            
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 2: 2026 Manpower Demand -->
+      <div class="feature-panel">
+        <div class="bg-overlay"></div>
+        <div class="inner-layout">
+          <div class="statistic-block">
+            <div class="year-label">2026</div>
+            <div class="quarter-label">Q1</div>
+            <div class="brand-caption" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">HAMZA JAN<br>ENTERPRIZE<br>WORKFORCE<br>OUTLOOK</div>
+          </div>
+          <div class="insight-block">
+            <h2 class="insight-heading" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">Pakistan Mein Manpower Demand Peak Par Hai!</h2>
+            <p class="insight-text" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">
+              Construction, factories aur offices mein skilled aur semi-skilled workers ki demand 50%+ barh gayi hai. 
+              Hamza Jan Enterprize FBR registered company reliable workforce turant supply karti hai.
+            </p>
+            <a href="#Enquiry" class="action-pill" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">ENQUIRY NOW →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel 3: One-Stop Solution -->
+      <div class="feature-panel">
+        <div class="bg-overlay"></div>
+        <div class="inner-layout">
+          <div class="statistic-block">
+            <div class="year-label" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">2026</div>
+            <div class="quarter-label"style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">Q1</div>
+            <div class="brand-caption" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">SKILLED<br>& SEMI-SKILLED<br>READY</div>
+          </div>
+          <div class="insight-block">
+            <h2 class="insight-heading" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">One-Stop Manpower Solution – Sab Ek Jagah!</h2>
+            <p class="insight-text" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">
+              Electricians, Welders, Drivers, Plumbers, Heavy Equipment Operators, Office Staff, Cleaning & General Labour – 
+              sab categories mein vetted workers turant dispatch. Fast, reliable aur FBR compliant.
+            </p>
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSc1s1E6enc2OmKB8Zlo0RXQL3hcNU9kF8ZTODR8f-BUjGACpQ/viewform?usp=publish-editor" 
+               target="_blank" class="action-pill" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">OPEN ENQUIRY FORM →</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
+    <!-- Navigation arrows -->
+    <div class="nav-control control-prev" onclick="movePanel(-1)">‹‹</div>
+    <div class="nav-control control-next" onclick="movePanel(1)">››</div>
+
+    <!-- Indicators -->
+    <div class="indicator-bar" id="indicatorBar"></div>
+  </div>
+
+  <script>
+    let activePanel = 0;
+    const track = document.getElementById('panelTrack');
+    const totalPanels = document.querySelectorAll('.feature-panel').length;
+    const indicatorContainer = document.getElementById('indicatorBar');
+
+    // Generate indicators
+    for (let i = 0; i < totalPanels; i++) {
+      const marker = document.createElement('div');
+      marker.classList.add('dot-marker');
+      if (i === 0) marker.classList.add('active');
+      marker.onclick = () => jumpToPanel(i);
+      indicatorContainer.appendChild(marker);
+    }
+
+    const markers = document.querySelectorAll('.dot-marker');
+
+    function refreshIndicators() {
+      markers.forEach((m, idx) => {
+        m.classList.toggle('active', idx === activePanel);
+      });
+    }
+
+    function movePanel(direction) {
+      activePanel += direction;
+      if (activePanel >= totalPanels) activePanel = 0;
+      if (activePanel < 0) activePanel = totalPanels - 1;
+      track.style.transform = `translateX(-${activePanel * 100}%)`;
+      refreshIndicators();
+    }
+
+    function jumpToPanel(index) {
+      activePanel = index;
+      track.style.transform = `translateX(-${activePanel * 100}%)`;
+      refreshIndicators();
+    }
+  </script>
+
+  <section class="feature2">
+  <div class="features-container">
+  <div class="feature-card">
+    <div class="icon"><i class="fas fa-lightbulb"></i></div>
+    <h3 style="font-family: Playball, cursive;
+  font-weight: 400;
+  font-style: normal;">Innovation</h3>
+    <p style="font-family: Playball, cursive;
+  font-weight: 400;
+  font-style: normal;">We innovate in construction & manpower to build smarter, faster, and better..</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon"><i class="fas fa-medal"></i></div>
+    <h3 style="font-family: Playball, cursive;
+  font-weight: 400;
+  font-style: normal;">High Quality</h3>
+    <p style="font-family: Playball, cursive;
+  font-weight: 400;
+  font-style: normal;">Unmatched quality in every build and every worker we supply.</p>
+  </div>
+
+  <div class="feature-card center">
+    <div class="icon"><i class="fas fa-thumbs-up"></i></div>
+    <h3 style="font-family: Playball, cursive;
+  font-weight: 400;
+  font-style: normal;">Best Solutions</h3>
+    <p style="font-family: Playball, cursive;
+  font-weight: 400;
+  font-style: normal;">Best in class construction & reliable manpower supply solutions.</p>
+  </div>
+
+  <div class="feature-card">
+    <div class="icon"><i class="fas fa-gears"></i></div>
+    <h3 style="font-family: Playball, cursive;
+  font-weight: 400;
+  font-style: normal;">Top Services</h3>
+    <p style="font-family: Playball, cursive;
+  font-weight: 400;
+  font-style: normal;">Top-tier services with reliability and full client support.</p>
+  </div>
+</div>
+</section>
+
+<section class="about-section" id="About Us">
+  <div class="container">
+
+    <!-- Left Image with Play -->
+    <div class="left-image">
+      <div class="overlay">
+        <video src="assets/PinDown.io_@StructuralSensei_1772108534.mp4" autoplay loop muted ></video>
+        
+      </div>
+    </div>
+
+    <!-- Center About Card -->
+    <div class="about-card">
+      <h2 style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">About Us</h2>
+      <p style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">trusted name in construction and workforce solutions, delivering high-quality residential, commercial, and industrial projects across Karachi and beyond. With expertise in building infrastructure, civil works, renovation, and reliable manpower supply (skilled, semi-skilled, and unskilled workers), we ensure every project is completed on time, within budget, and to the highest standards. Our team of experienced professionals is dedicated to safety, innovation, and complete client satisfaction.</p>
+    </div>
+
+    <!-- Right Why Choose Us -->
+    <div class="why-choose">
+      <h3 style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">Why Choose Us</h3>
+      
+      <div class="feature">
+        <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+        <div class="feature-content" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">
+          <h4>Innovative Approach</h4>
+          <p>we bring fresh ideas, modern construction techniques, and smart workforce solutions to every project.</p>
+        </div>
+      </div>
+
+      <div class="feature" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">
+        <div class="feature-icon"><i class="fas fa-headset"></i></div>
+        <div class="feature-content">
+          <h4>Dedicated Support</h4>
+          <p>From day one, we're committed to being there when you need us.</p>
+        </div>
+      </div>
+
+      <div class="feature" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">
+        <div class="feature-icon"><i class="fas fa-hard-hat"></i></div>
+        <div class="feature-content">
+          <h4>Quality-First & Fully Compliant</h4>
+          <p>We prioritize top-quality standards, strict safety protocols, and full compliance with local regulations right from the start.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  <section class="consultation">
+    <div class="container1">
+      <div style="max-width:1200px; margin:auto; display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+        <div>
+          <h2 class="form h2" style="color:#ffd900; font-size:48px; font-family: Playball, cursive;
+  font-weight: 400;
+  font-style: normal; ">Join Our Workforce.</h2>
+          <p style="font-size:20px; margin:30px 0; font-family: Playball, cursive;
+  font-weight: 400;
+  font-style: normal; color: #000; margin-bottom: 80px;">Want to work with us? Fill out the form by clicking the button below</p>
+        </div>
+            <div style="text-align:center; margin-top:20px;">
+  <a href="https://docs.google.com/forms/d/e/1FAIpQLScDWVMIi4xFDfj6jQ5gw34OzU4u7vttmCGkAZ4K-hzl11Pg-w/viewform?usp=header" target="_blank" 
+     style="background-color:#FFC700; color:#000000; padding:12px 30px; 
+            border-radius:25px; text-decoration:none; font-weight:bold;  font-family: Playball , cursive ; font-weight: bold;
+  font-weight: 400;
+  font-style: normal;">
+    Open Form
+  </a>
+</div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificates Modal -->
+<div id="certModal" class="modal">
+  <div class="modal-content">
+    <span class="close" id="closeCert">&times;</span>
+    
+    <h2 style="text-align:center; color:#004d40; margin-bottom:30px;">Our Official Certificates</h2>
+    
+    <div class="cert-container">
+      <!-- Certificate 1 -->
+      <div class="cert-item">
+        <img src="assets/fBR NOTICE.PNG" alt="FBR NTN Certificate">
+        <div class="cert-title">FBR NTN Certificate</div>
+        <p style="font-size:14px; color:#555;">National Tax Number Registration</p>
+      </div>
+      
+      <!-- Certificate 2 (dusra certificate daal do, naam change kar lo) -->
+      <div class="cert-item">
+        <img src="assets/fbr2.PNG" alt="EOBI Registration">
+        <div class="cert-title">SECP Registration Certificate</div>
+        <p style="font-size:14px; color:#555;">CERTIFICATE OF INCORPORATION</p>
+      </div>
+    </div>
+
+    <p style="text-align:center; margin-top:30px; color:#666;">
+      We are fully compliant with all regulatory requirements.<br>
+      For verification, contact us directly.
+    </p>
+  </div>
+</div>
+
+
+<script>
+// Modal open/close
+const certBtn = document.getElementById("certificatesBtn");
+const certModal = document.getElementById("certModal");
+const closeCert = document.getElementById("closeCert");
+
+certBtn.onclick = function(e) {
+  e.preventDefault();
+  certModal.style.display = "block";
+}
+
+closeCert.onclick = function() {
+  certModal.style.display = "none";
+}
+
+// Bahar click karne pe band ho jaye
+window.onclick = function(event) {
+  if (event.target == certModal) {
+    certModal.style.display = "none";
+  }
+}
+</script>
+
+
+  <footer>
+    <div class="footer-container" style="font-family: Roboto Condensed, sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;">
+
+      <div class="footer-column">
+        <h3>HAMZAJEC</h3>
+        <p>Building strong foundations in construction and reliable workforce solutions.
+We deliver quality projects, skilled manpower, and complete client satisfaction across Karachi and Pakistan.</p>
+        <div class="social-icons">
+            <a href="https://www.facebook.com/people/Hamza-Jec/pfbid0EpLtqjzs12gnBhw4WCA7LzvJ7W6TFfipfLfWFNG8yq2qgFSvnusn1qxP2Drb44JWl/"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://x.com/HamzaJec"><i class="fab fa-x-twitter"></i></a>
+        </div>
+      </div>
+
+      <!-- Column 2: Services -->
+      <div class="footer-column">
+        <h3>Services</h3>
+        <ul style="list-style:none;">
+          <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Construction Services</a></li>
+          <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Manpower Supply </a></li>
+          <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Residential & Commercial Building</a></li>
+          <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Industrial Support & Workforce Solutions</a></li>
+          
+        </ul>
+      </div>
+
+      <!-- Column 3: Company -->
+      <div class="footer-column">
+        <h3>Company</h3>
+        <ul style="list-style:none;">
+          <li><a href="#Vision" style="color:black; text-decoration:none; display:block; margin:10px 0;">Our Vision & Mission</a></li>
+          <li><a href="#About Us" style="color:black; text-decoration:none; display:block; margin:10px 0;">Why Choose Us</a></li>
+          <li><a href="#services" style="color:black; text-decoration:none; display:block; margin:10px 0;">Services</a></li>
+          <li><a href="#About Us" style="color:black; text-decoration:none; display:block; margin:10px 0;">About Us</a></li>
+          <li><a href="contact.html" style="color:black; text-decoration:none; display:block; margin:10px 0;">Contact Us</a></li>
+        </ul>
+      </div>
+
+        <!-- Column 4: CONTACT US -->
+      <div class="footer-column">
+        <h3>CONTACT US</h3>
+        
+        <ul style="list-style:none; padding:0;">
+        
+
+      
+          <li style="margin:12px 0;">
+            <a href="mailto:friends.of.climate2000@gmail.com" style="color:black; text-decoration:none; display:flex; align-items:center; gap:10px;">
+              <i class="fas fa-envelope" style="color:#000000; font-size:20px;"></i>
+              Email: friends.of.climate2000@gmail.com
+            </a>
+          </li>
+
+         
+          <li style="margin:12px 0;">
+            <a href="https://wa.me/923340644783?text=Hello%20Hamza%20Jan%20Enterprise%2C%20I%20want%20to%20inquire%20about%20your%20services." 
+               target="_blank" 
+               style="color:black; text-decoration:none; display:flex; align-items:center; gap:10px;">
+              <i class="fab fa-whatsapp" style="color:#000000; font-size:24px;"></i>
+              WhatsApp: 0334-0644783
+            </a>
+          </li>
+
+          <li style="margin:15px 0 0 0; line-height:1.5;">
+            <a href="https://www.google.com/maps/search/?api=1&query=Al+Shifa+Trust+Special+School+and+Centre+for+Rehabilitation%2C+Civil+Aviation+Colony%2C+Karachi%2C+Pakistan" 
+               target="_blank" 
+               style="color:black; text-decoration:none; display:flex; align-items:flex-start; gap:10px;">
+              <i class="fas fa-map-marker-alt" style="color:#000000; font-size:20px; margin-top:3px;"></i>
+              House No D/3, Near Al Shifa Trust Civil Aviation Colony
+              Karachi Airport Area.
+              
+            </a>
+          </li>
+
+        </ul>
+      </div>
+
+   
+
+    </div>
+
+    <!-- Bottom Links & Copyright -->
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a> •
+      <a href="#">Terms of Service</a> •
+      <a href="#">Cookie Policy</a>
+      
+      <div class="copyright">
+        © 2026 Hamza Jan Enterprise. All rights reserved.
+        (Designed & Developed in Karachi by Areeba)
+      </div>
+    </div>
+  </footer>
+  
+
+</body>
+<script>
+function toggleMenu(icon) {
+  const nav = document.querySelector('.nav-links');
+  nav.classList.toggle('show');
+  icon.classList.toggle('active');
+}
+</script>
+</html>
