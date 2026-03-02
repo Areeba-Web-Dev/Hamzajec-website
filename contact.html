@@ -1,23 +1,37 @@
-!<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us - HAMZAJEC | Manpower & Construction</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Playball&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" href="assets/favicon.ico" >
-   
+  <link rel="icon" type="image/png" href="assets/favicon.ico" />
+
+  <!-- Bootstrap 5 CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
   <style>
     * { margin:0; padding:0; box-sizing:border-box; }
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background:#ffffff;
       color:#333;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
     }
-
+    html {
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden; /* prevents horizontal scroll */
+    }
+    img, .card, .banner, section {
+      max-width: 100%;
+      height: auto;
+    }
     /* ── NAVBAR (exact copy from index.html) ── */
     #navbar {
       position: fixed;
@@ -93,21 +107,21 @@
       background-color:#192730;
     }
     .contact-hero video {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;   /* pura banner fill karega */
-  z-index: 0;
-}
-.contact-hero::before {
-  background: rgba(0,0,0,0.55);
-  z-index: 1;
-}
-.hero-content {
-  z-index: 2;
-}
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; /* pura banner fill karega */
+      z-index: 0;
+    }
+    .contact-hero::before {
+      background: rgba(0,0,0,0.55);
+      z-index: 1;
+    }
+    .hero-content {
+      z-index: 2;
+    }
     .contact-hero::before {
       content: "";
       position: absolute;
@@ -161,9 +175,6 @@
     }
 
     .info-cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-      gap: 25px;
       margin-bottom: 70px;
     }
     .card {
@@ -192,9 +203,6 @@
     }
 
     .bottom-contact {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 50px;
       align-items: stretch;
     }
     .map-frame {
@@ -245,9 +253,6 @@
     .footer-container {
       max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 40px 60px;
     }
     .footer-column h3 {
       color: #000;
@@ -308,246 +313,234 @@
       width: 100%;
       height: 100%;
       overflow: auto;
-      background-color: rgba(0,0,0,0.6);
+      background-color: rgba(0,0,0,0.5);
+      padding: 60px 0;
     }
     .modal-content {
       background-color: #fefefe;
-      margin: 8% auto;
+      margin: auto;
       padding: 30px;
       border-radius: 12px;
-      width: 85%;
+      width: 90%;
       max-width: 800px;
-      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      position: relative;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
     }
     .close {
       color: #aaa;
-      float: right;
-      font-size: 36px;
+      position: absolute;
+      top: 15px;
+      right: 25px;
+      font-size: 35px;
       font-weight: bold;
       cursor: pointer;
     }
     .close:hover,
     .close:focus {
-      color: #000;
+      color: black;
       text-decoration: none;
+      cursor: pointer;
     }
     .cert-container {
       display: flex;
       flex-wrap: wrap;
-      gap: 30px;
+      gap: 25px;
       justify-content: center;
-      margin: 30px 0;
+      margin: 20px 0;
     }
     .cert-item {
+      background: #f8f9fa;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
       text-align: center;
-      max-width: 320px;
+      max-width: 300px;
     }
     .cert-item img {
       width: 100%;
-      border-radius: 8px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-      margin-bottom: 12px;
+      height: auto;
+      border-radius: 6px;
+      margin-bottom: 15px;
     }
     .cert-title {
-      font-weight: bold;
       font-size: 1.2rem;
-      margin-bottom: 6px;
+      color: #004d40;
+      margin-bottom: 8px;
+      font-weight: bold;
     }
-/* ===== contact.html FIXED RESPONSIVE BREAKPOINTS ===== */
-
-/* MOBILE FIRST (320px–480px) */
-@media (max-width: 480px) {
-  .contact-form { width: 100%; padding: 10px; display: flex; flex-direction: column; gap: 15px; }
-  .contact-form input,
-  .contact-form textarea,
-  .contact-form button { width: 100%; margin-bottom: 10px; }
-  .hero { text-align: center; padding: 120px 5% 60px; }
-}
-
-/* TABLETS (481px–768px) */
-@media (max-width: 768px) {
-  .contact-form { width: 90%; margin: auto; }
-}
-
-/* SMALL LAPTOPS (769px–1024px) */
-@media (max-width: 1024px) {
-  .contact-form { width: 70%; margin: auto; }
-}
-
-/* LARGE SCREENS (1440px+) */
-@media (min-width: 1440px) {
-  .contact-form { width: 60%; margin: auto; }
-}
-    
   </style>
 </head>
 <body>
 
-  <!-- Navbar (exact from index) -->
-  <nav id="navbar" class="default" >
+  <!-- NAVBAR (custom, same as original) -->
+  <nav id="navbar">
     <div class="nav-container">
       <div class="logo">
-        <div class="logo-square">HC</div>
-        HAMZAJEC.
+        <div class="logo-square">H</div>
+        HAMZAJEC
       </div>
       <div class="nav-links">
         <a href="index.html">Home</a>
-        <a href="index.html#services">Services</a>   <!-- Points to index or add #services section here -->
-        <a href="index.html#About Us">About Us</a>
-        <a href="contact.html">Contact Us</a>
+        <a href="#services">Services</a>
+        <a href="#about">About</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
   </nav>
 
-  <!-- Contact Hero Section (like image you showed) -->
-  <section class="contact-hero" style="font-family: Roboto Condensed, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;">
-  <video src="assets/PinDown.io_@foofoofoofoo05_1772216509.mp4" loop muted autoplay playsinline></video>
+  <!-- CONTACT HERO (same as original) -->
+  <div class="contact-hero">
+    <video autoplay muted loop playsinline>
+      <source src="contact-hero-video.mp4" type="video/mp4"> <!-- Replace with your video src if different -->
+    </video>
     <div class="hero-content">
       <div class="breadcrumb">
-        <a href="index.html">Home</a> &rsaquo; Contact
+        <a href="index.html">Home</a> / Contact Us
       </div>
       <h1>Contact Us</h1>
     </div>
-  </section>
-
-  
-  <section class="contact-section" style="font-family: Roboto Condensed, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;">
-    <div class="get-in-touch">
-      <h2>Get In Touch With HAMZAJEC</h2>
-      <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    </div>
-
-    <div class="info-cards">
-      <div class="card">
-        <i class="fas fa-map-marker-alt"></i>
-        <h3>Our Location</h3>
-        <p>House No D/3, Near Al Shifa Trust Civil Aviation Colony<br>Karachi Airport Area.</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-phone-volume"></i>
-        <h3>Phone Number</h3>
-        <p>(+92) 334-0644783</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-envelope"></i>
-        <h3>Email Us</h3>
-        <p>friends.of.climate2000@gmail.com</p>
-      </div>
-      <div class="card">
-        <i class="fas fa-clock"></i>
-        <h3>Working Hours</h3>
-        <p>Mon - Sat : 11:00 - 12:00 </p>
-      </div>
-    </div>
-
-    <div style="text-align: center; margin: 50px 0;">
-      <button id="certificatesBtn" class="verify-btn">Verify Us – Check Certificates</button>
-    </div>
-
-    <div class="bottom-contact">
- 
-
-  <div class="map-frame" style="font-family: Roboto Condensed, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;">
-    <iframe 
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.5!2d67.160!3d24.895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f8b!2sAl%20Shifa%20Trust%20Special%20School%20and%20Centre%20for%20Rehabilitation%2C%20Civil%20Aviation%20Colony%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1730000000000" 
-      width="100%" 
-      height="100%" 
-      style="border:0;" 
-      allowfullscreen="" 
-      loading="lazy" 
-      referrerpolicy="no-referrer-when-downgrade">
-    </iframe>
   </div>
 
-      <div class="contact-form-container" style="font-family: Roboto Condensed, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;">
-    <form action="https://api.web3forms.com/submit" method="POST">
-  <input type="hidden" name="access_key" value="db02f7e8-56e3-4ae4-a0d1-9994ccf745dc">
-  <input type="text" name="name"  placeholder="Your Name"required>
-  <input type="email" name="email" placeholder="Your Email" required>
-  <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-  <button type="submit" class="send-btn">Submit Form</button>
-</form>
-  </div>
-</div>
-  </section>
+  <!-- CONTACT SECTION (with Bootstrap container and row for responsiveness) -->
+  <section class="contact-section">
+    <div class="container">
+      <div class="get-in-touch">
+        <h2>Get In Touch</h2>
+        <p class="subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      </div>
 
- 
-  <footer>
-    <div class="footer-container" style="font-family: Roboto Condensed, sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 500;
-  font-style: normal;">
-
-      <div class="footer-column">
-        <h3>HAMZAJEC</h3>
-        <p>Building strong foundations in construction and reliable workforce solutions.<br>We deliver quality projects, skilled manpower, and complete client satisfaction across Karachi and Pakistan.</p>
-        <div class="social-icons">
-          <a href="https://www.facebook.com/people/Hamza-Jec/pfbid0EpLtqjzs12gnBhw4WCA7LzvJ7W6TFfipfLfWFNG8yq2qgFSvnusn1qxP2Drb44JWl/"><i class="fab fa-facebook-f"></i></a>
-          <a href="https://x.com/HamzaJec"><i class="fab fa-x-twitter"></i></a>
-      
+      <!-- INFO CARDS (Bootstrap row + cols for responsive stacking) -->
+      <div class="row info-cards g-4">
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <i class="fas fa-map-marker-alt"></i>
+            <h3>Our Location</h3>
+            <p>House No D/3, Near Al Shifa Trust Civil Aviation Colony<br>Karachi Airport Area.</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <i class="fas fa-phone-volume"></i>
+            <h3>Phone Number</h3>
+            <p>(+92) 334-0644783</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <i class="fas fa-envelope"></i>
+            <h3>Email Us</h3>
+            <p>friends.of.climate2000@gmail.com</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3">
+          <div class="card">
+            <i class="fas fa-clock"></i>
+            <h3>Working Hours</h3>
+            <p>Mon - Sat : 11:00 - 12:00 </p>
+          </div>
         </div>
       </div>
 
-      <div class="footer-column">
-        <h3>Services</h3>
-        <ul style="list-style:none; padding:0;">
-          <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Construction Services</a></li>
-          <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Manpower Supply</a></li>
-          <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Residential & Commercial Building</a></li>
-          <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Industrial Support & Workforce Solutions</a></li>
-        </ul>
+      <div style="text-align: center; margin: 50px 0;">
+        <button id="certificatesBtn" class="verify-btn">Verify Us – Check Certificates</button>
       </div>
 
-      <div class="footer-column">
-        <h3>Company</h3>
-        <ul style="list-style:none; padding:0;">
-          <li><a href="#Vision" style="color:black; text-decoration:none; display:block; margin:10px 0;">Our Vision & Mission</a></li>
-          <li><a href="#About Us" style="color:black; text-decoration:none; display:block; margin:10px 0;">Why Choose Us</a></li>
-          <li><a href="#services" style="color:black; text-decoration:none; display:block; margin:10px 0;">Services</a></li>
-          <li><a href="#About Us" style="color:black; text-decoration:none; display:block; margin:10px 0;">About Us</a></li>
-          <li><a href="contact.html" style="color:black; text-decoration:none; display:block; margin:10px 0;">Contact Us</a></li>
-        </ul>
+      <!-- BOTTOM CONTACT (Bootstrap row + cols for stacking on mobile) -->
+      <div class="row bottom-contact g-5">
+        <div class="col-lg-6 map-frame" style="font-family: Roboto Condensed, sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal;">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.5!2d67.160!3d24.895!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33f8b!2sAl%20Shifa%20Trust%20Special%20School%20and%20Centre%20for%20Rehabilitation%2C%20Civil%20Aviation%20Colony%2C%20Karachi%2C%20Pakistan!5e0!3m2!1sen!2s!4v1730000000000" 
+            width="100%" 
+            height="100%" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+        <div class="col-lg-6 contact-form-container" style="font-family: Roboto Condensed, sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal;">
+          <form action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="db02f7e8-56e3-4ae4-a0d1-9994ccf745dc">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+            <button type="submit" class="send-btn">Submit Form</button>
+          </form>
+        </div>
       </div>
+    </div>
+  </section>
 
-      <div class="footer-column">
-        <h3>CONTACT US</h3>
-        <ul style="list-style:none; padding:0;">
-          <li style="margin:12px 0;">
-            <a href="mailto:friends.of.climate2000@gmail.com" style="color:black; text-decoration:none; display:flex; align-items:center; gap:10px;">
-              <i class="fas fa-envelope" style="color:#000; font-size:20px;"></i>
-              friends.of.climate2000@gmail.com
-            </a>
-          </li>
-          <li style="margin:12px 0;">
-            <a href="https://wa.me/923340644783?text=Hello%20Hamza%20Jan%20Enterprise%2C%20I%20want%20to%20inquire%20about%20your%20services." target="_blank" 
-               style="color:black; text-decoration:none; display:flex; align-items:center; gap:10px;">
-              <i class="fab fa-whatsapp" style="color:#000; font-size:24px;"></i>
-              0334-0644783
-            </a>
-          </li>
-          <li style="margin:15px 0 0 0; line-height:1.5;">
-            <a href="https://www.google.com/maps/search/?api=1&query=Al+Shifa+Trust+Special+School+and+Centre+for+Rehabilitation%2C+Civil+Aviation+Colony%2C+Karachi%2C+Pakistan" target="_blank" 
-               style="color:black; text-decoration:none; display:flex; align-items:flex-start; gap:10px;">
-              <i class="fas fa-map-marker-alt" style="color:#000; font-size:20px; margin-top:3px;"></i>
-              House No D/3, Near Al Shifa Trust Civil Aviation Colony<br>Karachi Airport Area.
-            </a>
-          </li>
-        </ul>
+  <!-- FOOTER (with Bootstrap row + cols for responsive stacking) -->
+  <footer>
+    <div class="container footer-container" style="font-family: Roboto Condensed, sans-serif; font-optical-sizing: auto; font-weight: 500; font-style: normal;">
+      <div class="row g-5">
+        <div class="col-md-6 col-lg-3 footer-column">
+          <h3>HAMZAJEC</h3>
+          <p>Building strong foundations in construction and reliable workforce solutions.<br>We deliver quality projects, skilled manpower, and complete client satisfaction across Karachi and Pakistan.</p>
+          <div class="social-icons">
+            <a href="https://www.facebook.com/people/Hamza-Jec/pfbid0EpLtqjzs12gnBhw4WCA7LzvJ7W6TFfipfLfWFNG8yq2qgFSvnusn1qxP2Drb44JWl/"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://x.com/HamzaJec"><i class="fab fa-x-twitter"></i></a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 footer-column">
+          <h3>Services</h3>
+          <ul style="list-style:none; padding:0;">
+            <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Construction Services</a></li>
+            <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Manpower Supply</a></li>
+            <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Residential & Commercial Building</a></li>
+            <li><a href="#" style="color:black; text-decoration:none; display:block; margin:10px 0;">Industrial Support & Workforce Solutions</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3 footer-column">
+          <h3>Company</h3>
+          <ul style="list-style:none; padding:0;">
+            <li><a href="#Vision" style="color:black; text-decoration:none; display:block; margin:10px 0;">Our Vision & Mission</a></li>
+            <li><a href="#About Us" style="color:black; text-decoration:none; display:block; margin:10px 0;">Why Choose Us</a></li>
+            <li><a href="#services" style="color:black; text-decoration:none; display:block; margin:10px 0;">Services</a></li>
+            <li><a href="#About Us" style="color:black; text-decoration:none; display:block; margin:10px 0;">About Us</a></li>
+            <li><a href="contact.html" style="color:black; text-decoration:none; display:block; margin:10px 0;">Contact Us</a></li>
+          </ul>
+        </div>
+        <div class="col-md-6 col-lg-3 footer-column">
+          <h3>CONTACT US</h3>
+          <ul style="list-style:none; padding:0;">
+            <li style="margin:12px 0;">
+              <a href="mailto:friends.of.climate2000@gmail.com" style="color:black; text-decoration:none; display:flex; align-items:center; gap:10px;">
+                <i class="fas fa-envelope" style="color:#000; font-size:20px;"></i>
+                friends.of.climate2000@gmail.com
+              </a>
+            </li>
+            <li style="margin:12px 0;">
+              <a href="https://wa.me/923340644783?text=Hello%20Hamza%20Jan%20Enterprise%2C%20I%20want%20to%20inquire%20about%20your%20services." target="_blank" 
+                 style="color:black; text-decoration:none; display:flex; align-items:center; gap:10px;">
+                <i class="fab fa-whatsapp" style="color:#000; font-size:24px;"></i>
+                0334-0644783
+              </a>
+            </li>
+            <li style="margin:15px 0 0 0; line-height:1.5;">
+              <a href="https://www.google.com/maps/search/?api=1&query=Al+Shifa+Trust+Special+School+and+Centre+for+Rehabilitation%2C+Civil+Aviation+Colony%2C+Karachi%2C+Pakistan" target="_blank" 
+                 style="color:black; text-decoration:none; display:flex; align-items:flex-start; gap:10px;">
+                <i class="fas fa-map-marker-alt" style="color:#000; font-size:20px; margin-top:3px;"></i>
+                House No D/3, Near Al Shifa Trust Civil Aviation Colony<br>Karachi Airport Area.
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
+    </div>
+    <div class="footer-links">
+      <a href="#">Privacy Policy</a> •
+      <a href="#">Terms of Service</a> •
+      <a href="#">Cookie Policy</a>
+      <div class="copyright">
+        © 2026 Hamza Jan Enterprise. All rights reserved.<br>
+        (Designed & Developed in Karachi by AREEBA)
+      </div>
+    </div>
+  </footer>
 
-      
+  <!-- CERT MODAL (same as original) -->
   <div id="certModal" class="modal">
     <div class="modal-content">
       <span class="close" id="closeCert">×</span>
@@ -573,7 +566,6 @@
     </div>
   </div>
 
-  
   <script>
     const certBtn = document.getElementById("certificatesBtn");
     const certModal = document.getElementById("certModal");
@@ -599,20 +591,7 @@
     }
   </script>
 
-
-
-    </div>
-
-    <div class="footer-links">
-      <a href="#">Privacy Policy</a> •
-      <a href="#">Terms of Service</a> •
-      <a href="#">Cookie Policy</a>
-      <div class="copyright">
-        © 2026 Hamza Jan Enterprise. All rights reserved.<br>
-        (Designed & Developed in Karachi by AREEBA)
-      </div>
-    </div>
-  </footer>
-
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>

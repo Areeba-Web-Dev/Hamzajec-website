@@ -12,6 +12,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 <link rel="icon" type="image/png" href="assets/favicon.ico" >
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     * {
       margin: 0;
@@ -22,9 +23,54 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       color: #fff;
       background: #ffffff;
-      
+      margin: 0;
+  padding: 0;
     }
+    body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;   /* prevents horizontal scroll */
+}
+img {
+  max-width: 100%;          /* Images never wider than container/screen */
+  height: auto;             /* Keeps aspect ratio */
+  display: block;           /* Removes unwanted bottom gap */
+  margin: 0 auto;           /* Centers if needed */
+}
+.card, .worker-card, img[src*="jpg"], img[src*="png"] {   /* Or use your actual class names */
+  max-width: 100%;
+  width: 100%;              /* Or 90% for some breathing room */
+}
+.services-container, .workers-section {   /* Replace with your actual container class or id */
+  display: flex;
+  flex-wrap: wrap;          /* Allows cards to wrap to next line on small screens */
+  justify-content: center;
+  gap: 1rem;                /* Space between cards */
+  padding: 1rem;
+}
 
+.card {
+  flex: 1 1 300px;          /* Grow/shrink, min ~300px wide */
+  max-width: 400px;         /* Optional cap */
+}.card {
+  display: block;
+  margin-bottom: 1.5rem;
+}h1, h2, h3, h4 {
+  word-wrap: break-word;    /* Or overflow-wrap: break-word; */
+  hyphens: auto;            /* Optional – better word breaking */
+  text-align: center;       /* Centers for better mobile look */
+  padding: 0 1rem;          /* Side padding so text doesn't touch edges */
+}@media (max-width: 768px) {
+  section, .container {
+    padding: 1rem;          /* Reduce big paddings */
+  }
+  h1 {
+    font-size: 1.8rem;      /* Smaller headings if too big */
+  }
+  body {
+    font-size: 16px;        /* Base readable size */
+  }
+}
 
 #navbar {
   position: fixed;
